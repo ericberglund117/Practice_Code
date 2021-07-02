@@ -34,6 +34,11 @@ describe("Concerts", function() {
         let search = findbyName('Gallant');
         expect(search).to.be.a('object');
         assert.equal(search.name, 'Gallant')
+      });
+      
+      it('should return nothing is there is no match', function() {
+        let noMatch = findbyName('Soups');
+        assert.equal(noMatch, null)
       })
     });
   });
