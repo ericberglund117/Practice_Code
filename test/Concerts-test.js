@@ -53,6 +53,24 @@ describe("Concerts", function() {
         expect(prices).to.have.lengthOf(13);
         expect(prices[0]).to.have.property('price')
         assert.equal(prices[0].price, 20);
-      })
-    })
+      });
+    });
+
+    describe('getByLabel', function() {
+      it('should be a function', function() {
+        assert.isFunction(getByLabel)
+      });
+
+      it('should return an array of all the artists with a specific label', function() {
+        let sampleData = [  
+          { name: 'SG Lewis', label: 'atlantic' },
+          { name: 'Penguin Prison', label: 'atlantic' },
+          { name: 'Future Islands', label: 'atlantic' }
+        ];
+        let label = getByLabel('atlantic');
+        expect(label).to.be.a('array');
+        expect(label).to.have.lengthOf(3);
+        expect(label).to.deep.equal(sampleData)
+      });
+    });
   });
