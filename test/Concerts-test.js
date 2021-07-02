@@ -39,6 +39,20 @@ describe("Concerts", function() {
       it('should return nothing is there is no match', function() {
         let noMatch = findbyName('Soups');
         assert.equal(noMatch, null)
-      })
+      });
     });
+
+    describe('ticketCost', function() {
+      it('should be a function', function() {
+        assert.isFunction(ticketCost)
+      });
+
+      it('should add the appropriate ticket price to each artist', function() {
+        let prices = ticketCost();
+        expect(prices).to.be.a('array');
+        expect(prices).to.have.lengthOf(13);
+        expect(prices[0]).to.have.property('price')
+        assert.equal(prices[0].price, 20);
+      })
+    })
   });
