@@ -99,4 +99,16 @@ describe("Concerts", function() {
         expect(artistsLabels).to.have.property('capital').with.lengthOf(6)
       });
     });
+
+    describe('crowdPerArt', function() {
+      it('should be a function', function() {
+        assert.isFunction(crowdPerArt)
+      });
+
+      it('should add the crowdsize to each artists', function() {
+        let crowd = crowdPerArt();
+        expect(crowd).to.be.a('array')
+        expect(crowd[0]).to.have.property('crowdSize')
+      });
+    });
   });
