@@ -85,4 +85,18 @@ describe("Concerts", function() {
         expect(allPrices).to.equal(340)
       });
     });
+
+    describe('labelArtists', function() {
+      it('should be a function', function() {
+        assert.isFunction(labelArtists)
+      });
+
+      it('should return an object with labels as the keys and artists as the value', function() {
+        let artistsLabels = labelArtists();
+        expect(artistsLabels).to.be.a('object')
+        expect(artistsLabels).to.have.property('atlantic').with.lengthOf(3)
+        expect(artistsLabels).to.have.property('virgin').with.lengthOf(4)
+        expect(artistsLabels).to.have.property('capital').with.lengthOf(6)
+      });
+    });
   });
