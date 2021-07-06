@@ -73,4 +73,16 @@ describe("Concerts", function() {
         expect(label).to.deep.equal(sampleData)
       });
     });
+
+    describe('allShowPrices', function() {
+      it('should be a function', function() {
+        assert.isFunction(allShowPrices)
+      });
+
+      it('should show the price of going to all the shows', function() {
+        let allPrices = allShowPrices();
+        expect(allPrices).to.be.a('number')
+        expect(allPrices).to.equal(340)
+      });
+    });
   });
