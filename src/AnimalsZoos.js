@@ -103,4 +103,6 @@ const animals = [
   //     typesAllowed: [ 'Carnivore' ],
   //     continents: [ 'Africa', 'North America' ] } ]
   
-  
+  const findCarnivores = () => {
+    return zoos.filter(zoo => zoo.typesAllowed.includes('Carnivore'))
+  }
