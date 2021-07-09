@@ -188,3 +188,11 @@ const fatAnimal = () => {
     })
     return weights[0]
   }
+
+  // find the zoo with the least weight allowed.
+const lightZoo = () => {
+    let zooWeights = zoos.sort((a,b) => {
+      return a.maxWeight - b.maxWeight
+    })
+    return zooWeights[0]
+  }
