@@ -156,3 +156,25 @@ const weighingAnimals = (pet, quant) => {
     let ani = animals.find(animal => animal.name === pet)
     return ani.weight * quant
   }
+
+
+// return an array with the zoos that can take a Wolf
+// remember that it has to match the type and continent
+
+// e.g.
+// returns => 
+//  [ { name: 'San Diego Wild Animal Park',
+//     maxWeight: 7500,
+//     typesAllowed: [ 'Herbivore', 'Carnivore' ],
+//     continents: [ 'Asia', 'North America' ] },
+//   { name: 'Central Park Zoo',
+//     maxWeight: 7000,
+//     typesAllowed: [ 'Carnivore' ],
+//     continents: [ 'Africa', 'North America' ] } ]
+
+const zooMatch = (pet) => {
+    let ani = animals.find(animal => animal.name === pet)
+    return zoos.filter(zoo => {
+      return zoo.typesAllowed.includes(ani.type) && zoo.continents.includes(ani.home)
+    })
+  }
