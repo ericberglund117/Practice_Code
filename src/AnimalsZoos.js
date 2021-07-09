@@ -1,4 +1,4 @@
-// created by Patrick Goulding
+// created by Patrick Goulding--IronFE
 
 const animals = [
     {
@@ -106,3 +106,10 @@ const animals = [
   const findCarnivores = () => {
     return zoos.filter(zoo => zoo.typesAllowed.includes('Carnivore'))
   }
+
+  // return an array of zoos that can take animals from Asia
+
+const asianAnimals = () => {
+    return zoos.filter(zoo => zoo.continents.includes('Asia'))
+  }
+  
