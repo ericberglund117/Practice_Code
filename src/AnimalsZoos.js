@@ -178,3 +178,13 @@ const zooMatch = (pet) => {
       return zoo.typesAllowed.includes(ani.type) && zoo.continents.includes(ani.home)
     })
   }
+
+
+// find the animal that weighs the most.
+
+const fatAnimal = () => {
+    let weights = animals.sort((a, b) => {
+      return b.weight - a.weight
+    })
+    return weights[0]
+  }
