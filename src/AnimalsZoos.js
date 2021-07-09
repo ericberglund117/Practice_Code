@@ -145,3 +145,14 @@ const findHome = (name) => {
     let ani = animals.find(animal => animal.name === name)
     return ani.home
   }
+
+
+  // make a function that takes a quanitity and a animal name and returns their total weight
+//e.g. 
+// weighingAnimals('Wolf', 6)
+// returns => 540
+
+const weighingAnimals = (pet, quant) => {
+    let ani = animals.find(animal => animal.name === pet)
+    return ani.weight * quant
+  }
