@@ -109,7 +109,39 @@ const animals = [
 
   // return an array of zoos that can take animals from Asia
 
+  //e.g.
+//  [ { name: 'Denver Zoo',
+//     maxWeight: 10000,
+//     typesAllowed: [ 'Herbivore', 'Omnivore' ],
+//     continents: [ 'Africa', 'Asia', 'North America' ] },
+//   { name: 'Bronx Zoo',
+//     maxWeight: 5000,
+//     typesAllowed: [ 'Herbivore' ],
+//     continents: [ 'Africa', 'Asia', 'North America' ] },
+//   { name: 'San Diego Wild Animal Park',
+//     maxWeight: 7500,
+//     typesAllowed: [ 'Herbivore', 'Carnivore' ],
+//     continents: [ 'Asia', 'North America' ] },
+//   { name: 'Kansas City Zoo',
+//     maxWeight: 8000,
+//     typesAllowed: [ 'Omnivore', 'Carnivore' ],
+//     continents: [ 'Africa', 'Asia' ] },
+//   { name: 'San Antonio Zoo',
+//     maxWeight: 3000,
+//     typesAllowed: [ 'Herbivore', 'Omnivore' ],
+//     continents: [ 'Asia', 'North America' ] } ]
+
 const asianAnimals = () => {
     return zoos.filter(zoo => zoo.continents.includes('Asia'))
   }
   
+
+// make a function that takes an animal name and returns their home continent
+// e.g.
+// findHome('Tiger')
+// returns => 'Africa'
+
+const findHome = (name) => {
+    let ani = animals.find(animal => animal.name === name)
+    return ani.home
+  }
