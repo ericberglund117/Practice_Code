@@ -196,3 +196,18 @@ const lightZoo = () => {
     })
     return zooWeights[0]
   }
+
+  // create an array of objects with the zoo properties && just the names of the animals allowed in it.
+
+const newZoos = () => {
+    let response = zoos.map(zoo => {
+      let animalArr = []
+      let match = animals.filter(animal => {
+        if(zoo.typesAllowed.includes(animal.type) && zoo.continents.includes(animal.home)) {
+          animalArr.push(animal.name)
+        }
+      })
+      return {name: zoo.name, maxWeight: zoo.maxWeight, typesAllowed: zoo.typesAllowed, continents: zoo.continents, animalsAllowed: animalArr}
+    })  
+    return response
+  };
