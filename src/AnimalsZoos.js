@@ -339,3 +339,18 @@ const continentKey = () => {
 // Asia:
 //  [ { name: 'Panda', weight: 700, type: 'Herbivore', home: 'Asia' } ] 
 //  }
+
+module.exports = {
+    findCarnivores,
+    asianAnimals,
+    findHome,
+    weighingAnimals,
+    zooMatch,
+    fatAnimal,
+    lightZoo,
+    newZoos,
+    maxAnimal,
+    newZooObj,
+    animalKey,
+    continentKey
+}
