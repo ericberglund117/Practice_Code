@@ -301,6 +301,24 @@ const animalKey = () => {
 
 // create an object with the continents as the keys and the animals on that continent as the value
 
+const continentKey = () => {
+    return zoos.reduce((acc, zoo, currI) => {
+      let anArray = []
+      animals.filter(animal => {
+        if(zoo.continents.includes(animal.home)) {
+          anArray.push(animal)
+        }
+  
+        if(!acc[`${zoo.continents[currI]}`]) {
+        acc[`${zoo.continents[currI]}`] = anArray
+        } else {
+        acc[`${zoo.continents[currI + 1]}`] = anArray
+      }
+      })
+      return acc
+    },{})
+  }
+
 //e.g.
 
 //  { 
