@@ -269,6 +269,23 @@ const newZooObj = () => {
 
 // create an object with the animal name as the key, and the zoos allowed as the value
 
+const animalKey = () => {
+    return animals.reduce((acc, animal) => {
+      let zooArr = [];
+      zoos.filter(zoo => {
+        if(zoo.typesAllowed.includes(animal.type) && zoo.continents.includes(animal.home)) {
+          zooArr.push(zoo.name)
+        }
+      })
+      if(!acc[`${animal.name}`]) {
+        acc[`${animal.name}`] = zooArr
+      } else {
+        acc[`${animal.name}`] = zooArr
+      }
+      return acc
+    }, {}) 
+  }
+
 // e.g.
 // { Rhino: [ 'Denver Zoo', 'Bronx Zoo' ],
 //   'Grizly Bear': [ 'Denver Zoo', 'San Antonio Zoo' ],
