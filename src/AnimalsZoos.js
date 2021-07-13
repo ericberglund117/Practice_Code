@@ -211,3 +211,85 @@ const newZoos = () => {
     })  
     return response
   };
+
+  ////////////////// BONUS ROUND!!!! ///////////////////
+
+// find the max amount of each animal in a specific zoo
+
+
+const maxAnimal = () => {
+    let allZoos = []
+    zoos.reduce((acc, zoo) => {
+      animals.map(animal => {
+        let num = Math.round(zoo.maxWeight / animal.weight)
+        if(!acc["name"]) {
+        acc["name"] = zoo.name
+        } else {
+        acc["name"] = zoo.name
+        }
+  
+        if(!acc[`max${animal.name}Allowed`]) {
+        acc[`max${animal.name}Allowed`] = num
+        } else {
+        acc[`max${animal.name}Allowed`] = num
+        }
+      })
+  
+      if(!allZoos.includes(zoo.name)) {
+        allZoos.push(acc)
+      } else {
+        allZoos.push(acc)
+      }
+      return {...acc} 
+    }, {})
+    return allZoos
+  }
+
+// create a new object with the zoo name as the key and the animals allowed as the value
+
+
+// e.g.
+// { 'Denver Zoo': [ 'Rhino', 'Grizly Bear', 'Monkey', 'Panda' ],
+//   'Bronx Zoo': [ 'Rhino', 'Monkey', 'Panda' ],
+//   'San Diego Wild Animal Park': [ 'Wolf', 'Panda' ],
+//   'Kansas City Zoo': [ 'Lion', 'Tiger' ],
+//   'Central Park Zoo': [ 'Lion', 'Tiger', 'Wolf' ],
+//   'San Antonio Zoo': [ 'Grizly Bear', 'Panda' ] }
+
+// create an object with the animal name as the key, and the zoos allowed as the value
+
+// e.g.
+// { Rhino: [ 'Denver Zoo', 'Bronx Zoo' ],
+//   'Grizly Bear': [ 'Denver Zoo', 'San Antonio Zoo' ],
+//   Monkey: [ 'Denver Zoo', 'Bronx Zoo' ],
+//   Lion: [ 'Kansas City Zoo', 'Central Park Zoo' ],
+//   Tiger: [ 'Kansas City Zoo', 'Central Park Zoo' ],
+//   Wolf: [ 'San Diego Wild Animal Park', 'Central Park Zoo' ],
+//   Panda:
+//    [ 'Denver Zoo',
+//      'Bronx Zoo',
+//      'San Diego Wild Animal Park',
+//      'San Antonio Zoo' ] }
+
+// create an object with the continents as the keys and the animals on that continent as the value
+
+//e.g.
+
+//  { 
+//  Africa:
+//  [ { name: 'Rhino', weight: 1700, type: 'Herbivore', home: 'Africa' },
+//    { name: 'Monkey', weight: 60, type: 'Herbivore', home: 'Africa' },
+//    { name: 'Lion', weight: 400, type: 'Carnivore', home: 'Africa' },
+//    { name: 'Tiger', weight: 600, type: 'Carnivore', home: 'Africa' } ],
+// 'North America':
+//  [ { name: 'Grizly Bear',
+//      weight: 800,
+//      type: 'Omnivore',
+//      home: 'North America' },
+//    { name: 'Wolf',
+//      weight: 90,
+//      type: 'Carnivore',
+//      home: 'North America' } ],
+// Asia:
+//  [ { name: 'Panda', weight: 700, type: 'Herbivore', home: 'Asia' } ] 
+//  }
