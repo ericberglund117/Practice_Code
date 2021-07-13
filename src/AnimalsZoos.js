@@ -246,7 +246,18 @@ const maxAnimal = () => {
   }
 
 // create a new object with the zoo name as the key and the animals allowed as the value
-
+const newZooObj = () => {
+    let response = zoos.map(zoo => {
+      let animalArr = []
+      animals.filter(animal => {
+        if(zoo.typesAllowed.includes(animal.type) && zoo.continents.includes(animal.home)) {
+          animalArr.push(animal.name)
+        }
+      })
+      return {[zoo.name]: animalArr}
+    })  
+    return response
+  }
 
 // e.g.
 // { 'Denver Zoo': [ 'Rhino', 'Grizly Bear', 'Monkey', 'Panda' ],
