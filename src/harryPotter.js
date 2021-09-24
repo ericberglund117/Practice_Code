@@ -124,3 +124,12 @@ const houseSearch = (head) => {
   return filtStuds.map(stud => stud.name)
 }
 houseSearch('Snape')
+
+// Problem 2.1
+//How many house points have been added to the house cups overall?
+
+const totalPoints = students.reduce((acc, stud) => {
+    acc += stud.pointsForHouse
+    return acc
+  }, 0)
+  console.log(totalPoints)
