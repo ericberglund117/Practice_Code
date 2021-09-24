@@ -119,3 +119,19 @@ const guestObj = murder.topFiveEpisodes.reduce((acc, show) => {
     return acc
   }, [])
   console.log(guestObj)
+
+
+// Problem 2
+// Return an Array of Objects with the name of the 
+// episode as the key and the synopsis as the value, 
+// e.g. [{"Curse of the Daanav": "Cursed Indian ruby"}, {"Magnum on Ice ":"Magnum PI crossover"}...]
+
+const synObj = murder.topFiveEpisodes.reduce((acc, show) => {
+    let obj = {}
+    if(!obj[show.name]) {
+      obj[show.name] = show.synopsis
+    } 
+    acc.push(obj)
+    return acc
+  }, [])
+  console.log(synObj)
