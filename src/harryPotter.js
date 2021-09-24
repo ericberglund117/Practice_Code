@@ -133,3 +133,14 @@ const totalPoints = students.reduce((acc, stud) => {
     return acc
   }, 0)
   console.log(totalPoints)
+
+  //Problem 2.2
+//How many house points have the Ravenclaw folks added to their cup?
+
+const ravenPoints = students.reduce((acc, stud) => {
+    if(stud.house === 'Ravenclaw') {
+      acc += stud.pointsForHouse
+    }
+    return acc
+  }, 0) 
+  console.log(ravenPoints)
