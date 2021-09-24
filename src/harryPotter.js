@@ -179,3 +179,13 @@ const headClasses = () => {
     }, {})
   }
   headClasses()
+
+  //Problem 5.2
+//Which one of Dumbledore's family members are alive? RETURN JUST THE NAME, not an array of object
+
+const aliveFam = () => {
+    let match = hogwarts.currentHeadmaster.family.filter(fam => fam.alive)
+    let person = match.pop()
+    return person.brother
+  }
+  aliveFam()
