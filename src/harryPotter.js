@@ -189,3 +189,16 @@ const aliveFam = () => {
     return person.brother
   }
   aliveFam()
+
+  //Problem 5.3
+//Which of them are dead? RETURN JUST THE NAMES, not an array of objects
+
+const deadFam = () => {
+    let match = hogwarts.currentHeadmaster.family.filter(fam => !fam.alive)
+    return match.map(person => {
+      if (person.father || person.mother || person.sister) {
+        return person.father || person.mother || person.sister
+      }
+    })
+  }
+  deadFam()
