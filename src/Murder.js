@@ -66,3 +66,8 @@ const murder = {
       }
     ]
   }
+
+  //Problem 1
+//Return an array of episodes that are culturallyInsensitive
+const insensitive = murder.topFiveEpisodes.filter(show => show.culturallyInsensitive === true)
+console.log(insensitive)
