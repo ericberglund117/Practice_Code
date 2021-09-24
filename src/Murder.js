@@ -150,3 +150,30 @@ const allGuests = murder.topFiveEpisodes.reduce((acc, show) => {
     return acc
   }, {}) 
   console.log(allGuests)
+
+  //Level 3
+
+
+// Problem 1
+//return an object with the episode names as keys and the co-stars as an array 
+// e.g {
+//  "Curse of the Daanav": [        
+      // "Jane Badler",
+      // "Kabir Bedi",
+      // "Larry Linville"],
+//  "Magnum on Ice ": [        
+        // "John McMartin",
+        // "Tom Selleck",
+        // "Jessica Walter"]
+// }
+
+
+const showGuest = murder.topFiveEpisodes.reduce((acc, show) => {
+    let obj = {}
+    if(!obj[show.name]) {
+      obj[show.name] = show.guestStars
+    } 
+    acc.push(obj)
+    return acc
+  }, [])
+  console.log(showGuest)
