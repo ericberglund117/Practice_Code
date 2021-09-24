@@ -114,3 +114,13 @@ const houseSearch = (head) => {
   return students.filter(stud => stud.house === houseHeads[head])
 }
 houseSearch('Snape')
+
+
+//Problem 1.2
+//Can you make the array send back only the names of the students?
+
+const houseSearch = (head) => {
+  let filtStuds = students.filter(stud => stud.house === houseHeads[head])
+  return filtStuds.map(stud => stud.name)
+}
+houseSearch('Snape')
