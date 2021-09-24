@@ -76,3 +76,15 @@ console.log(insensitive)
 //Return the episode that includes Magnum PI
 const magnum = murder.topFiveEpisodes.filter(show => show.guestStars.includes('Tom Selleck'))
 console.log(magnum)
+
+//Problem 3
+//Return an array of all stars in the top five episodes array
+const allStars = murder.topFiveEpisodes.reduce((acc, show) => {
+    if(!acc.includes(show.guesStars)){
+      acc.push(show.guestStars)
+    } else{
+      acc.push(show.guestStars)
+    }
+    return acc.flat()
+  }, [])
+  console.log(allStars)
