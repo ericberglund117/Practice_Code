@@ -88,3 +88,34 @@ const allStars = murder.topFiveEpisodes.reduce((acc, show) => {
     return acc.flat()
   }, [])
   console.log(allStars)
+
+  //Level 2
+
+//Problem 1
+// Return an array of objects with just the name and the guest stars for each episode
+//e.g. [{name: "My Johnny Lies Over the Ocean",
+  //guestStars: [
+    //   "Vicki Lawrence",
+    //   "Leslie Nielsen",
+    //   "Jo Anne Worley"
+    // ]}, 
+    // {name: "Menace, Anyone?",
+    // guestStars: [
+    //     "Bryan Cranston",
+    //     "Linda Hamilton",
+    //     "David Spielberg"
+    //   ]}...
+    // ]
+
+const guestObj = murder.topFiveEpisodes.reduce((acc, show) => {
+    let obj = {}
+    if(!obj["name"]) {
+      obj["name"] = show.name
+    } 
+    if(!obj['guestStars']){
+      obj['guestStars'] = show.guestStars
+    }
+    acc.push(obj)
+    return acc
+  }, [])
+  console.log(guestObj)
