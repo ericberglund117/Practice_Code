@@ -71,3 +71,8 @@ const murder = {
 //Return an array of episodes that are culturallyInsensitive
 const insensitive = murder.topFiveEpisodes.filter(show => show.culturallyInsensitive === true)
 console.log(insensitive)
+
+//Problem 2
+//Return the episode that includes Magnum PI
+const magnum = murder.topFiveEpisodes.filter(show => show.guestStars.includes('Tom Selleck'))
+console.log(magnum)
