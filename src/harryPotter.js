@@ -160,3 +160,22 @@ const addKey = students.map(stud => {
   })
   
   console.log(addKey)
+
+  //Problem 3.2
+// Return the class that each house head is teaching
+
+const headClasses = () => {
+    let houseKeys = Object.keys(houseHeads)
+    return hogwarts.classes.reduce((acc, hogClass) => {
+      houseKeys.map(head => {
+        if(!acc[head]) {
+          acc[head] 
+        }
+        if(head === hogClass.instructor) {
+          acc[head] = hogClass.name
+        } 
+      })
+      return acc
+    }, {})
+  }
+  headClasses()
