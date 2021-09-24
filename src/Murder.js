@@ -135,3 +135,18 @@ const synObj = murder.topFiveEpisodes.reduce((acc, show) => {
     return acc
   }, [])
   console.log(synObj)
+
+  // Problem 3
+// Return one Object with all the guest stars
+
+const allGuests = murder.topFiveEpisodes.reduce((acc, show) => {
+    if (!acc['guestStars']) {
+      acc['guestStars'] = show.guestStars
+    }
+    if (!acc['guestStars'].includes(show.guestStars)) {
+      acc['guestStars'] += show.guestStars
+    }
+  
+    return acc
+  }, {}) 
+  console.log(allGuests)
