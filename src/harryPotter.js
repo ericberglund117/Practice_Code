@@ -144,3 +144,19 @@ const ravenPoints = students.reduce((acc, stud) => {
     return acc
   }, 0) 
   console.log(ravenPoints)
+
+  // Problem 3.1
+//For all students excpet the Slytherins, add a property called 'currentlyAttending' with a value of true. For Slytherins, add make it false
+
+const addKey = students.map(stud => {
+    let attendValue 
+    if(stud.house === 'Slytherin') {
+      attendValue = false
+    } else {
+      attendValue = true
+    }
+    Object.assign(stud, {currentlyAttending: attendValue})
+    return stud
+  })
+  
+  console.log(addKey)
