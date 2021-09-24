@@ -209,3 +209,12 @@ const laureates2017 = [
       ]
     }
   ]
+
+  // What countries were the laureates born in for each prize?
+
+const names = () => {
+    return laureates2017.map(person => {
+      return person.bornCountry
+    })
+  }
+  names()
