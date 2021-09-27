@@ -517,3 +517,21 @@ const showData = [
         return showData.filter(show => show.duration > 10000000)
     }
     durationTime()
+
+    // Create an object that has how many shows were played at each venue
+const places = (venue) => {
+    const venues = showData.map(show => show.venue.name)
+    return showData.reduce((acc, show) => {
+      let counter = 0
+      venues.forEach(ven => {
+        if (ven === show.venue.name) {
+          counter++
+        }
+      })
+      if(!acc[show.venue.name]) {
+        acc[show.venue.name] = counter
+      }
+      return acc
+    }, {})
+  }
+  places()
