@@ -8,3 +8,14 @@ const restaurants = [
     { name: "Acorn", type: "Dinner", number_of_reviews: 309, neighborhood: "RiNo" },
     { name: "Panzano", type: "Dinner", number_of_reviews: 1316, neighborhood: "LoDo" }
 ]
+
+//1. sum up the the total numer of restaurant reviews for all the restaurants.
+
+  //*EXPECTED OUTPUT*//
+  // 6501
+
+  const totalReviews = restaurants.reduce((acc, rest) => {
+    acc += rest.number_of_reviews
+    return acc
+  }, 0)
+  console.log(totalReviews)
