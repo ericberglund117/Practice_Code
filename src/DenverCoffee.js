@@ -63,3 +63,12 @@ const houses = (neigh) => {
     }
   }
   houses('Baker')
+
+  // Refactor your function to return an array of all coffee shops in the given neighborhood instead of just the first one. 
+// Example: fn(coffeeShops, 'Congress Park') -> ['St. Marks Coffee House', 'Hooked on Colfax', 'The Weathervane Cafe'];
+
+const houses = (neigh) => {
+    let keys = Object.keys(denverCoffeeShops)
+    return keys.filter(key => denverCoffeeShops[key].neighborhood === neigh)
+  }
+  houses('City Park')
