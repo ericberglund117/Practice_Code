@@ -510,3 +510,10 @@ const showData = [
         return showData.map(show => show.date)
     }
     tourDates()
+
+    // Find all of the shows with a duration longer than 10000000
+
+    const durationTime = () => {
+        return showData.filter(show => show.duration > 10000000)
+    }
+    durationTime()
