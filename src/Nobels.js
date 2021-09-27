@@ -218,3 +218,26 @@ const names = () => {
     })
   }
   names()
+
+  // return an object where the key is a prize category and the value is an array of strings representing the countries of the laureates
+// {
+//   physics: [ 'USA', ],
+//   chemistry: [ 'Germany' ] 
+// }
+
+const prizeCat = () => {
+    return prizes2017.reduce((acc, prize) => {
+     let arr = []
+     if(!acc[prize.category]) {
+       acc[prize.category] = arr
+       } else {
+       acc[prize.category] = arr
+     }
+     let ids = prize.laureates.map(win => win.id)
+     let people = laureates2017.filter(person => ids.includes(person.id))
+     let winnerCountry = people.map(person => person.bornCountry)
+     arr.push(winnerCountry)
+     return acc
+   }, {})
+ }
+ prizeCat()
