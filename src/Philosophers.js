@@ -37,3 +37,6 @@ const philosophers = [
       main_interests: ['Logic', 'Ontology', 'Epistemology', 'Philosophy of Language', 'Philosophy of Mathematics', 'Philosophy of Science', 'Set Theory']
     }
   ]
+
+  //Return an array of the names of all the philosophers who's school is 'Analytic Philosophy'
+  const schools = philosophers.filter(phil => phil.school === 'Analytic Philosophy').map(person => person.name)
