@@ -19,3 +19,12 @@ const restaurants = [
     return acc
   }, 0)
   console.log(totalReviews)
+
+  //2. Create an object where each property is the name of a restaurant and its key value is its number of reviews.
+const restObj = restaurants.reduce((acc, rest) => {
+    if(!acc[rest.name]) {
+      acc[rest.name] = rest.number_of_reviews
+    }
+    return acc
+  }, {})
+  console.log(restObj)
