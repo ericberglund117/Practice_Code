@@ -75,4 +75,23 @@ const restKey = restaurants.reduce((acc, rest) => {
   }, {})
   console.log(restKey)
 
+//3B Create an object where each key is the neighborhood and its value is the name of each restaurant in that neighborhood.
+  //*EXPECTED OUTPUT*//
+// { 'Cap Hill': [ 'Fruition Restaurant' ],
+//   'Platt Park': [ 'Sushi Den' ],
+//   LoDo: [ 'Sam\'s No. 3', 'The Capital Grille', 'Panzano' ],
+//   'City Park': [ 'Pete\'s Kitchen' ],
+//   Highlands: [ 'Root Down' ],
+//   RiNo: [ 'Acorn' ] }
+
+const neighKey = restaurants.reduce((acc, rest) => {
+    if(!acc[rest.neighborhood]) {
+      acc[rest.neighborhood] = [rest.name]
+    } else {
+      acc[rest.neighborhood].push(rest.name)
+    }
+    return acc
+  }, {})
+  console.log(neighKey)
+
 
