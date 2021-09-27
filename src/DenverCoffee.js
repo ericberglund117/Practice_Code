@@ -72,3 +72,12 @@ const houses = (neigh) => {
     return keys.filter(key => denverCoffeeShops[key].neighborhood === neigh)
   }
   houses('City Park')
+
+  // Refactor your function to only include the matching coffee shops that are currently open. 
+// Example: fn(coffeeShops, 'City Park') -> ['St. Marks Coffee House', 'The Weathervane Cafe'];
+
+const houses = (neigh) => {
+    let keys = Object.keys(denverCoffeeShops)
+    return keys.filter(key => denverCoffeeShops[key].neighborhood === neigh && denverCoffeeShops[key].isOpen)
+  }
+  houses('City Park')
