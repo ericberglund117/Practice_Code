@@ -81,3 +81,16 @@ const houses = (neigh) => {
     return keys.filter(key => denverCoffeeShops[key].neighborhood === neigh && denverCoffeeShops[key].isOpen)
   }
   houses('City Park')
+
+  // Refactor your function so that if there are multiple coffee shop matches (matches both neighborhood and is open) the one with the highest rating will be returned. 
+// Example: fn(coffeeShops, 'City Park') -> 'The Weathervane Cafe'
+
+const houses = (neigh) => {
+    let keys = Object.keys(denverCoffeeShops)
+    let matches = keys.filter(key => denverCoffeeShops[key].neighborhood === neigh && denverCoffeeShops[key].isOpen)
+   let highest = matches.sort((a, b) => {
+      return denverCoffeeShops[b].stars - denverCoffeeShops[a].stars
+    })
+    return highest[0]
+  }
+  houses('City Park')
