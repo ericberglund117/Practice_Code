@@ -578,3 +578,12 @@ let total = showData.reduce((acc, show) => {
 }
 
 msToTime(total)
+
+// Return another list of all the tour dates, but with the dashes (-) replaced with slashes(/)
+
+const replace = () => {
+    return showData.map(show => {
+      return show.date.replace(/-/g, "/")
+    })
+  }
+  replace()
