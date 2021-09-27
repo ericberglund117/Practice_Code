@@ -54,3 +54,18 @@ const philosophers = [
     return allAges[allAges.length - 1]
   } 
   getOldest()
+
+  //Return an array of all the main interests with no duplicates.
+const interests = () => {
+    return philosophers.reduce((acc, person) => {
+      person.main_interests.forEach(int => {
+        if(!acc.includes(int)) {
+          acc.push(int)
+        } 
+      })
+    return acc
+    }, [])  
+    
+  }
+  interests()
+  
