@@ -557,3 +557,24 @@ const latVen = () => {
   // Find the show with the id of 1910
 let year = showData.find(show => show.id === 1910)
 console.log(year)
+
+// Find the total duration of all the shows in hours, minutes, and seconds (hh:mm:ss) *duration provided is in ms*
+let total = showData.reduce((acc, show) => {
+    acc += show.duration
+    return acc
+  }, 0)
+
+  const msToTime = (duration) => {
+  var milliseconds = Math.floor((duration % 1000) / 100),
+    seconds = Math.floor((duration / 1000) % 60),
+    minutes = Math.floor((duration / (1000 * 60)) % 60),
+    hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
+
+  hours = (hours < 10) ? "0" + hours : hours;
+  minutes = (minutes < 10) ? "0" + minutes : minutes;
+  seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+  return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
+}
+
+msToTime(total)
