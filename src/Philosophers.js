@@ -40,3 +40,17 @@ const philosophers = [
 
   //Return an array of the names of all the philosophers who's school is 'Analytic Philosophy'
   const schools = philosophers.filter(phil => phil.school === 'Analytic Philosophy').map(person => person.name)
+
+  // Return the age of the oldest philosopher 
+  const getOldest = () => {
+    let allAges = philosophers.reduce((acc, person) => {
+      let age = person.died - person.born
+      acc.push(age)
+      return acc
+    },[])
+    allAges.sort((a, b) => {
+      return a - b
+    })
+    return allAges[allAges.length - 1]
+  } 
+  getOldest()
