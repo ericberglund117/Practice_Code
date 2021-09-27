@@ -553,3 +553,7 @@ const latVen = () => {
     })
   }
   latVen()
+
+  // Find the show with the id of 1910
+let year = showData.find(show => show.id === 1910)
+console.log(year)
