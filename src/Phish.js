@@ -535,3 +535,21 @@ const places = (venue) => {
     }, {})
   }
   places()
+
+  // Create a function that returns an array of venue objects whose keys are the name of the venue and it’s latitude. There should be no repeat venues and they should be sorted by latitude
+
+const latVen = () => {
+    let allVens = showData.reduce((acc, show) => {
+      let obj = {}
+      if(!obj[show.venue.name]){
+        obj[show.venue.name] = show.venue.latitude
+      }
+      acc.push(obj)
+      return acc
+    }, [])
+    let unique = [...new Set(allVens.map(JSON.stringify))].map(JSON.parse);
+    return unique.sort((a, b) => {
+      return Object.values(a) - Object.values(b)
+    })
+  }
+  latVen()
