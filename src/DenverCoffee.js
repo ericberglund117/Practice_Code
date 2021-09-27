@@ -49,3 +49,17 @@ const houses = (neigh) => {
     return keys.find(key => denverCoffeeShops[key].neighborhood === neigh)
   }
   houses('City Park')
+
+  // Refactor your function to include a message if no coffee shop is found in that neighborhood. 
+// Example fn(coffeeShops, 'Baker') -> Sorry, we can't find any coffee shops in Baker! 
+
+const houses = (neigh) => {
+    let keys = Object.keys(denverCoffeeShops)
+    let match = keys.filter(key => denverCoffeeShops[key].neighborhood === neigh)
+    if(match.length === 0) {
+      return `Sorry, we can't find any coffee shops in ${neigh}!`
+    } else {
+      return match
+    }
+  }
+  houses('Baker')
