@@ -3335,3 +3335,10 @@ const slowestThree = () => {
 const mars = characters.filter(char => char.universe.name === 'Mario')
 
 console.log(mars)
+
+
+///Give me an array of character names in the A tier.
+
+const aTier = characters.filter(char => char.tier.tier === 'A')
+
+console.log(aTier)
