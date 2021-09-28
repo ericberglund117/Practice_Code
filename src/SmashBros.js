@@ -3328,3 +3328,10 @@ const slowestThree = () => {
   }
     
     slowestThree()
+
+
+///Give me an array of all characters in the Mario universe
+
+const mars = characters.filter(char => char.universe.name === 'Mario')
+
+console.log(mars)
