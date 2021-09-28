@@ -3313,3 +3313,18 @@ const strongestRank = characters.sort((a, b) => {
   
   const strongest = strongestRank[strongestRank.length - 1].name
   console.log(strongest)
+
+  ////Give me the three slowest runners in the game in array
+
+const slowestThree = () => {
+    let arr = []
+    let slowestRank = characters.sort((a, b) => {
+      return a.speeds.run_speed - b.speeds.run_speed
+    })
+    arr.push(slowestRank[0])
+    arr.push(slowestRank[1])
+    arr.push(slowestRank[2])
+    return arr
+  }
+    
+    slowestThree()
