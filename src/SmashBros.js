@@ -3367,3 +3367,22 @@ const charFind = () => {
     return runnerCounter.map(char => char.name)
   }
   charFind()
+
+
+//Level 2
+
+
+/////Give me an object where each key is a character name, and the value is an array of their cons that contain the word 'slow'. EX: {Bayonetta: ['Slow Run'], Bowser: [], Bowser Jr.: ['Slow moves']....}
+
+const objCon = () => {
+    return characters.reduce((acc, char) => {
+      let arr = []
+      let slowLow = char.cons.map(con => con.toLowerCase())
+      let onlySlow = slowLow.filter(con => con.includes('slow'))
+      if(!acc[char.name]) {
+        acc[char.name] = arr.flat()
+      }
+      return acc
+    }, {})
+  }
+  objCon()
