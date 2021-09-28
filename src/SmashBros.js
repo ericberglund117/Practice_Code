@@ -3386,3 +3386,17 @@ const objCon = () => {
     }, {})
   }
   objCon()
+
+  //Give me an array of characters who are middleweights and are in the top 10 (tier.rank).
+//EX: [{name: Diddy Kong, weightClass: Middleweight, rank: 3}...]
+
+const topMiddle = () => {
+    return characters.reduce((acc, char) => {
+      if(char.weight.class === 'Middle Weight' && char.tier.rank <= 10) {
+        acc.push(char)
+      }
+      return acc
+    }, [])
+  }
+  
+  topMiddle(
