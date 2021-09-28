@@ -3342,3 +3342,13 @@ console.log(mars)
 const aTier = characters.filter(char => char.tier.tier === 'A')
 
 console.log(aTier)
+
+//Give me an array of character names in the B tier that start with the letter M.
+
+const mBTier = () => {
+    let tier = characters.filter(char => char.tier.tier === 'B')
+    let people = tier.filter(char => char.name.startsWith('M'))
+    return people.map(char => char.name)
+  }
+  
+  mBTier()
