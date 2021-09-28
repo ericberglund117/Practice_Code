@@ -3414,3 +3414,19 @@ const universeObj = () => {
     }, {})
   }
   universeObj()
+
+  /////Give me an array of characters where each character is an object where the key is the name and the value is the character's win percentage EX: [{Zero Suit Samus: 52.9%}]
+
+const charWin = () => {
+    return characters.reduce((acc, char) => {
+      let obj = {}
+      let total = char.world_stats.wins + char.world_stats.losses
+      let percentage = (100 * char.world_stats.wins) / total
+      if(!obj[char.name]) {
+        obj[char.name] = `${Math.round(percentage * 100) / 100} %`
+      }
+      acc.push(obj)
+      return acc
+    }, [])
+  }
+  charWin()
