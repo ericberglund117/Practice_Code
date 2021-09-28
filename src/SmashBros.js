@@ -3280,3 +3280,21 @@ const characters = [
        "style": 14
     }
   ]
+
+
+//////Give me an array of the characters based on their rank.  EX: [ {Bayonetta: 1}, {Cloud: 2}, {Diddy Kong: 3}...{Jigglypuff: 58} ]
+
+const rankedChar = characters.reduce((acc, char) => {
+    let obj = {}
+    if(!obj[char.name]) {
+      obj[char.name] = char.tier.rank
+    }
+    acc.push(obj)
+    return acc
+  }, [])
+  
+  const sortedRank = rankedChar.sort((a, b) => {
+    return Object.values(a) - Object.values(b)
+  })
+  
+  console.log(sortedRank)
