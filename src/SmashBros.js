@@ -3399,4 +3399,18 @@ const topMiddle = () => {
     }, [])
   }
   
-  topMiddle(
+  topMiddle()
+
+  ////Give me an object where each key is a universe and the value is array of names of the characters in that universe. EX: {Mario: [mario, bowser, luigi, peach...], Yoshi: [yoshi]}
+
+const universeObj = () => {
+    return characters.reduce((acc, char) => {
+      if(!acc[char.universe.name]) {
+        acc[char.universe.name] = [char.name]
+      } else {
+        acc[char.universe.name].push(char.name)
+      }
+      return acc
+    }, {})
+  }
+  universeObj()
