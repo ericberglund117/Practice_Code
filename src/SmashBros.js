@@ -3298,3 +3298,9 @@ const rankedChar = characters.reduce((acc, char) => {
   })
   
   console.log(sortedRank)
+
+  ////Give me an array of all FeatherWeight characters
+
+const allFeather = characters.filter(char => char.weight.class === 'Feather Weight')
+
+console.log(allFeather)
