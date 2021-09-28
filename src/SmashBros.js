@@ -3304,3 +3304,12 @@ const rankedChar = characters.reduce((acc, char) => {
 const allFeather = characters.filter(char => char.weight.class === 'Feather Weight')
 
 console.log(allFeather)
+
+////Give me the name of character whose 'strongest smash' is most powerful
+
+const strongestRank = characters.sort((a, b) => {
+    return a.strongest_smash.damage - b.strongest_smash.damage
+  })
+  
+  const strongest = strongestRank[strongestRank.length - 1].name
+  console.log(strongest)
