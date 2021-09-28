@@ -3352,3 +3352,18 @@ const mBTier = () => {
   }
   
   mBTier()
+
+  ///Find me a character in the middleweight class, with a jump height above 35, a run speed above 1.75, and a counter move.  
+
+const charFind = () => {
+    let middleJump = characters.filter(char => {
+      return char.weight.class === 'Middle Weight' && char.jump_height > 35
+    })
+  
+    let runnerCounter = middleJump.filter(charc => {
+      return charc.speeds.run_speed > 1.75 && charc.counter === 'y'
+      })
+    
+    return runnerCounter.map(char => char.name)
+  }
+  charFind()
