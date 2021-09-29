@@ -15,9 +15,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_bayonetta.svg",
           "logo":"images/universe_logos/bayonetta_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Up Smash",
           "damage":17
@@ -130,9 +128,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_mario.svg",
           "logo":"images/universe_logos/mario_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Down Smash",
           "damage":18
@@ -301,9 +297,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_final_fantasy.svg",
           "logo":"images/universe_logos/final_fantasy_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Forward Smash (3-hit combo)",
           "damage":20
@@ -358,9 +352,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_fire_emblem.svg",
           "logo":"images/universe_logos/fire_emblem_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Forward Smash (tip of sword))",
           "damage":16
@@ -414,9 +406,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_kid_icarus.svg",
           "logo":"images/universe_logos/kid_icarus_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Forward Smash (2-hit combo)",
           "damage":15
@@ -642,9 +632,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_duck_hunt.svg",
           "logo":"images/universe_logos/duck_hunt_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Forward Smash (3-hit combo)",
           "damage":17
@@ -868,9 +856,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_pokemon.svg",
           "logo":"images/universe_logos/pokemon_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Up Smash (2-hit combo)",
           "damage":19
@@ -1212,9 +1198,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_punchout.svg",
                "logo":"images/universe_logos/punch_out_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Straight Lunge (Neutral Special fully charged)",
           "damage":35
@@ -1379,9 +1363,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_fire_emblem.svg",
           "logo":"images/universe_logos/fire_emblem_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Shield Breaker (Neutral Special fully charged)",
           "damage":23
@@ -1605,9 +1587,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_mega_man.svg",
           "logo":"images/universe_logos/mega_man_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Forward Smash",
           "damage":19
@@ -1773,9 +1753,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_smash_bros.svg",
           "logo":"images/universe_logos/mii_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Forward Smash",
           "damage":18
@@ -1829,9 +1807,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_smash_bros.svg",
           "logo":"images/universe_logos/mii_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Charge Blast (Neutral Special fully charged)",
           "damage":22
@@ -1885,9 +1861,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_smash_bros.svg",
           "logo":"images/universe_logos/mii_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Forward Smash (tip)",
           "damage":16
@@ -2112,9 +2086,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_pacman.svg",
           "logo":"images/universe_logos/pac_man_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Forward Smash",
           "damage":16
@@ -2167,9 +2139,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_kid_icarus.svg",
           "logo":"images/universe_logos/kid_icarus_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Forward Smash",
           "damage":16
@@ -2448,9 +2418,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_fire_emblem.svg",
           "logo":"images/universe_logos/fire_emblem_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Forward Smash",
           "damage":16
@@ -2504,9 +2472,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_mario.svg",
           "logo":"images/universe_logos/mario_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Luma Shot (Neutral Special stage 5)",
           "damage":16
@@ -2616,9 +2582,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_street_fighter.svg",
           "logo":"images/universe_logos/street_fighter_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Up Smash",
           "damage":17
@@ -2789,9 +2753,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_xenoblade.svg",
           "logo":"images/universe_logos/xenoblade_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Forward Smash (2-hit combo)",
           "damage":18
@@ -2956,9 +2918,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_animal_crossing.svg",
           "logo":"images/universe_logos/animal_crossing_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Timber (Down Special - Stage 3 tree)",
           "damage":25
@@ -3067,9 +3027,7 @@ const characters = [
           "icon":"images/universe_icons/gray_icon_wii_fit.svg",
           "logo":"images/universe_logos/wii_logo.png"
        },
-       "past_smash_games":["Smash Bros. 4",  
-  
-       ],
+       "past_smash_games":["Smash Bros. 4"],
        "strongest_smash":{  
           "attack":"Up Smash",
           "damage":18
