@@ -3388,3 +3388,20 @@ const charWin = () => {
     }, [])
   }
   charWin()
+
+  /////Give me an object where each property is a smash game and the value is an array of character names who appear in that game. EX {'Smash Bros. 4': ['Bayonetta', 'Bowser'...], 'Smash Bros. Brawl: ['Bowser', 'Captain Falcon'], 'Smash Bros. Melee: ['Bowser'...], 'Smash Bros. (64): []}
+
+const smashGame = () => {
+    return characters.reduce((acc, char) => {
+       let allGames = char.past_smash_games.filter(game => typeof game === 'string')
+       allGames.map(game => {
+         if(!acc[game]) {
+           acc[game] = [char.name]
+         } else {
+           acc[game].push(char.name)
+         }
+       })
+       return acc
+     },{})
+   }
+   smashGame()
