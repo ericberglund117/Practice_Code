@@ -33,4 +33,16 @@ const orders = [
     }
   ];
 
+  // Level One
+// Write a function that will total up the profit of all orders.
+
+// 105
+
+function sumProfit() {
+    return orders.reduce((acc, val) => {
+      acc += val.price
+      return acc
+    }, 0)
+  }
   
+  sumProfit()
