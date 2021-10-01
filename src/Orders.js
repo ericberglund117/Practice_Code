@@ -79,3 +79,49 @@ const sumProfitRefactor = () => {
   }
   
   sumProfitRefactor()
+
+  // Level Three
+// Refactor your function to add in the special considerations for each type (make sure to exclude 'none').
+
+// {
+//   cake: {
+//     names: [ 'Strawberries & Cream Cake', 'Chocolate Cake', 'Funfetti Cake' ],
+//     totalProfit: 80,
+//     specialConsiderations: [
+//       'gluten free',
+//       'pick up on Thursday afternoon',
+//       'birthday cake',
+//       'olive oil allergy',
+//       'add cream cheese icing',
+//       'simple decoration',
+//     ]
+//   },
+//   tart: {
+//     names: [ 'Chocolate Raspberry Tart' ],
+//     totalProfit: 25,
+//     specialConsiderations: [ 
+//       'pick up on Friday', 
+//       'no allergies' 
+//     ]
+//   }
+// }
+
+const special = () => {
+    return orders.reduce((acc, order) => {
+      if(!acc[order.type]){
+        acc[order.type] = {
+          name: [order.name], 
+          totalProfit: [order.price], 
+          specialConsiderations: [order.specialConsiderations]
+          }
+        } else {
+          {
+            name: acc[order.type].name.push(order.name) 
+            totalProfit: acc[order.type].totalProfit += order.price
+            specialConsiderations: acc[order.type].specialConsiderations.push(order.specialConsiderations)
+          }
+        }
+      return acc
+    },{})
+  }
+  special()
