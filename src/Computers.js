@@ -78,3 +78,15 @@ const compoOnly = () => {
   }
   
   compoOnly()
+
+  // Below, return the count of computers that are new: Answer: 3
+
+const newComp = () => {
+    return computers.reduce((acc, comp) => {
+      if(comp.isNew) {
+        acc++
+      }
+      return acc
+    },0)
+  }
+  newComp()
