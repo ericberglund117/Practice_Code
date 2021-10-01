@@ -46,3 +46,36 @@ function sumProfit() {
   }
   
   sumProfit()
+
+  // Level Two
+// Refactor your function to organize your orders by type (ex: 'cake' and 'tart') - keeping track of the names and total profit for that type.
+
+// {
+//   cake: {
+//     names: [ 'Strawberries & Cream Cake', 'Chocolate Cake', 'Funfetti Cake' ],
+//     totalProfit: 80
+//   },
+//   tart: { 
+//     names: [ 'Chocolate Raspberry Tart' ],
+//     totalProfit: 25 
+//   }
+// }
+
+const sumProfitRefactor = () => {
+    return orders.reduce((acc, ord) => { 
+      if(!acc[ord.type]){
+        acc[ord.type] = {
+          name: [ord.name],
+          totalProfit: ord.price
+        }
+      } else {
+        {
+          name: acc[ord.type].name.push(ord.name)
+          totalProfit: acc[ord.type].totalProfit += ord.price
+        }
+      }
+      return acc
+    }, {})
+  }
+  
+  sumProfitRefactor()
