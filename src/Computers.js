@@ -90,3 +90,35 @@ const newComp = () => {
     },0)
   }
   newComp()
+
+
+// Below return an array of computers that have 32GB of ram and then sort by price low -> high: Answer will be:
+// [
+//   {
+//     cost: 1200,
+//     components: {
+//       gpu: 'Radeon Pro Vega 20',
+//       ram: '32GB',
+//       cpu: 'Intel Core i9'
+//     },
+//     isNew: true,
+//     isLaptop: true,
+//     accessories: ['mouse', 'keyboard']
+//   },
+//   {
+//     cost: 2000,
+//     components: {
+//       gpu: 'Nvidia Geoforce GTX 1080ti',
+//       ram: '32GB',
+//       cpu: 'Intel Core i7'
+//     },
+//     isNew: false,
+//     isLaptop: false,
+//     accessories: ['mouse', 'keyboard', 'headset', 'RGB']
+//   }
+// ]
+
+const comp32 = () => {
+    return computers.filter(comp => comp.components.ram === '32GB').sort((a,b) => a.cost - b.cost)
+  }
+  comp32()
