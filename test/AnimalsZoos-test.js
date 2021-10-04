@@ -15,8 +15,12 @@ var {
     newZooObj,
     animalKey,
     continentKey
-} = require('../src/AnimalsZoos.');
+} = require('../src/AnimalsZoos.js');
 
 describe('AnimalZoos', function() {
-    describe('')
+    describe('findCarnivores', function() {
+        it('should be a function', function() {
+            assert.isFunction(findCarnivores);
+        });
+    })
 })
