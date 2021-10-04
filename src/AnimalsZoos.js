@@ -134,7 +134,7 @@ const animals = [
 const asianAnimals = () => {
     return zoos.filter(zoo => zoo.continents.includes('Asia'))
   }
-  
+  asianAnimals()
 
 // make a function that takes an animal name and returns their home continent
 // e.g.
@@ -145,7 +145,7 @@ const findHome = (name) => {
     let ani = animals.find(animal => animal.name === name)
     return ani.home
   }
-
+  findHome()
 
   // make a function that takes a quanitity and a animal name and returns their total weight
 //e.g. 
@@ -156,7 +156,7 @@ const weighingAnimals = (pet, quant) => {
     let ani = animals.find(animal => animal.name === pet)
     return ani.weight * quant
   }
-
+  weighingAnimals()
 
 // return an array with the zoos that can take a Wolf
 // remember that it has to match the type and continent
@@ -178,7 +178,7 @@ const zooMatch = (pet) => {
       return zoo.typesAllowed.includes(ani.type) && zoo.continents.includes(ani.home)
     })
   }
-
+  zooMatch()
 
 // find the animal that weighs the most.
 
@@ -188,6 +188,7 @@ const fatAnimal = () => {
     })
     return weights[0]
   }
+  fatAnimal()
 
   // find the zoo with the least weight allowed.
 const lightZoo = () => {
@@ -196,7 +197,7 @@ const lightZoo = () => {
     })
     return zooWeights[0]
   }
-
+  lightZoo()
   // create an array of objects with the zoo properties && just the names of the animals allowed in it.
 
 const newZoos = () => {
@@ -211,7 +212,7 @@ const newZoos = () => {
     })  
     return response
   };
-
+  newZoos()
   ////////////////// BONUS ROUND!!!! ///////////////////
 
 // find the max amount of each animal in a specific zoo
@@ -244,6 +245,7 @@ const maxAnimal = () => {
     }, {})
     return allZoos
   }
+  maxAnimal()
 
 // create a new object with the zoo name as the key and the animals allowed as the value
 const newZooObj = () => {
@@ -258,6 +260,7 @@ const newZooObj = () => {
     })  
     return response
   }
+  newZooObj()
 
 // e.g.
 // { 'Denver Zoo': [ 'Rhino', 'Grizly Bear', 'Monkey', 'Panda' ],
@@ -285,7 +288,7 @@ const animalKey = () => {
       return acc
     }, {}) 
   }
-
+  animalKey()
 // e.g.
 // { Rhino: [ 'Denver Zoo', 'Bronx Zoo' ],
 //   'Grizly Bear': [ 'Denver Zoo', 'San Antonio Zoo' ],
@@ -318,6 +321,7 @@ const continentKey = () => {
       return acc
     },{})
   }
+  continentKey()
 
 //e.g.
 
