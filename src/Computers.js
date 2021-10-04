@@ -159,3 +159,25 @@ const nvidia = () => {
     },[])
   }
   nvidia()
+
+  //Below return an array of all possible accessories from all computers and then sort alphabetically: Answer will be :
+
+//[ 'darthVader', 'headset', 'keyboard', 'liquidCooling', 'microphone', 'mouse', 'rgb' ]
+
+
+// __________________________________________________________________________________________________________________________________
+
+// (*Delete this & Enter Solution For Above Here*)
+
+const accessAlpha = () => {
+    return computers.reduce((acc, comp) => {
+      comp.accessories.map(access => {
+        if(!acc.includes(access)) {
+          acc.push(access)
+        }
+      })
+      acc.sort()
+      return acc
+    }, [])
+  }
+  accessAlpha()
