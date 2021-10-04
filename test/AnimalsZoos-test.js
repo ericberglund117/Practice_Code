@@ -43,4 +43,10 @@ describe('AnimalZoos', function() {
             expect(zoos).to.have.lengthOf(3);
         });
     });
+    
+    describe('asianAnimals', function() {
+        it('should be a function', function() {
+            assert.isFunction(asianAnimals);
+        });
+    });
 })
