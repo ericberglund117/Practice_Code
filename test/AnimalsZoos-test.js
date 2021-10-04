@@ -18,9 +18,29 @@ var {
 } = require('../src/AnimalsZoos.js');
 
 describe('AnimalZoos', function() {
+    let zooData
+    beforeEach(function() {
+        zooData = [{
+            name: 'Central Park Zoo',
+            maxWeight: 7000,
+            typesAllowed:['Carnivore'],
+            continents:['Africa', 'North America']
+          },
+            {
+            name: 'San Antonio Zoo',
+            maxWeight: 3000,
+            typesAllowed:['Herbivore', 'Omnivore'],
+            continents:['Asia', 'North America']
+          }]
+    })
     describe('findCarnivores', function() {
         it('should be a function', function() {
             assert.isFunction(findCarnivores);
         });
-    })
+        it('should return only zoos that accept carnivores', function() {
+            let zoos = findCarnivores();
+            expect(zoos).to.be.a('array');
+            expect(zoos).to.have.lengthOf(3);
+        });
+    });
 })
