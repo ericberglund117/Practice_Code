@@ -56,4 +56,10 @@ describe('AnimalZoos', function() {
             assert.deepEqual(asianZoos[0].continents, [ 'Asia', 'North America'])
         });
     });
+
+    describe('findHome', function() {
+        it('should be a function', function() {
+            assert.isFunction(findHome);
+        });
+    });
 })
