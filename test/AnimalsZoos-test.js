@@ -61,5 +61,10 @@ describe('AnimalZoos', function() {
         it('should be a function', function() {
             assert.isFunction(findHome);
         });
+        it('should return the home of a given animal', function() {
+            let animalHomes = findHome('Tiger');
+            expect(animalHomes).to.be.a('string')
+            assert.equal(animalHomes, 'Africa')
+        });
     });
 })
