@@ -48,5 +48,12 @@ describe('AnimalZoos', function() {
         it('should be a function', function() {
             assert.isFunction(asianAnimals);
         });
+        it('should only return zoos that accept animals from Asia', function() {
+            let asianZoos = asianAnimals();
+            expect(asianZoos).to.be.a('array')
+            expect(asianZoos).to.have.lengthOf(5)
+            expect(asianZoos[0]).to.have.property('continents')
+            assert.deepEqual(asianZoos[0].continents, [ 'Asia', 'North America'])
+        });
     });
 })
